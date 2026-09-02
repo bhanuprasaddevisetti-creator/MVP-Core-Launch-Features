@@ -1029,3 +1029,24 @@ class AdminAuditLog(TimestampMixin, Base):
     after_state: Mapped[str] = mapped_column(Text, default="")
     note: Mapped[str] = mapped_column(Text, default="")
     ip_address: Mapped[str] = mapped_column(String(64), default="")
+
+
+
+class OtpCode(TimestampMixin, Base):
+    """Short-lived one-time codes for email/phone sign-in."""
+
+    __tablename__ = "otp_code"
+    __table_args__ = (
+        Index("ix_otp_identifier_active", "identifier", "consumed_at"),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True, init=False)
+    identifier: Mapped[str] = mapped_column(String(255), index=True)
+    code_hash: Mapped[str] = mapped_column(String(128))
+    purpose: Mapped[str] = mapped_column(String(32), default="login")
+    expires_at: Mapped[dt.datetime] = mapped_column(DateTime(timezone=True))
+    consumed_at: Mapped[dt.datetime | None] = mapped_column(
+        DateTime(timezone=True), default=None
+    )
+    attempts: Mapped[int] = mapped_column(Integer, default=0)
+    
