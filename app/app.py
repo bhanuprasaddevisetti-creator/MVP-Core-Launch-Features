@@ -1,5 +1,5 @@
 import reflex as rx
-import reflex_enterprise as rxe
+
 
 from app import design
 from app.pages.advisory import advisory_page
@@ -64,7 +64,7 @@ def index() -> rx.Component:
     )
 
 
-app = rxe.App(
+app = rx.App(
     theme=rx.theme(appearance="light"),
     head_components=[
         rx.el.link(rel="preconnect", href="https://fonts.googleapis.com"),
