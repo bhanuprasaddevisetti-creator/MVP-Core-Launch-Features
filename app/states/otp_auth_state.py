@@ -17,6 +17,15 @@ EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 PHONE_RE = re.compile(r"^\+?[0-9]{10,15}$")
 
 
+ADMIN_IDENTIFIERS = {
+    x.strip().lower()
+    for x in os.environ.get("ADMIN_IDENTIFIERS", "").split(",")
+    if x.strip()
+}
+
+
+
+
 def _hash_code(code: str, identifier: str) -> str:
     return hashlib.sha256(f"{identifier}:{code}".encode()).hexdigest()
 
