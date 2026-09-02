@@ -1,0 +1,635 @@
+{
+  "version": 4,
+  "app_title": "Telangana Farm Marketplace MVP Plan",
+  "nav": {
+    "placement": "none",
+    "items": []
+  },
+  "pages": [
+    {
+      "id": "page-51f395d9",
+      "name": "Account Access",
+      "route": "/login",
+      "item_ref": {
+        "index": 1,
+        "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+      },
+      "blocks": [
+        {
+          "id": "auth-hero",
+          "type": "hero",
+          "label": "Field-to-market welcome",
+          "hint": "Split composition with real Telangana produce imagery, English/Telugu language control, trust message, and farmer/customer role explanation",
+          "x": 0,
+          "y": 0,
+          "w": 7,
+          "h": 10,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "auth-form",
+          "type": "form",
+          "label": "Login and signup",
+          "hint": "Email/password access with account mode, farmer or customer role selection, validation, and recovery guidance",
+          "x": 7,
+          "y": 0,
+          "w": 5,
+          "h": 10,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-52664146",
+      "name": "Marketplace Discovery",
+      "route": "/marketplace",
+      "item_ref": {
+        "index": 1,
+        "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+      },
+      "blocks": [
+        {
+          "id": "market-nav",
+          "type": "nav",
+          "label": "Marketplace navigation",
+          "hint": "Brand, Browse, Sell Produce, Advisory, Orders, language toggle, location, and account actions",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "market-search",
+          "type": "form",
+          "label": "Location and crop search",
+          "hint": "Location permission/address fallback, crop query, radius state, filters, and nearest-first explanation",
+          "x": 0,
+          "y": 1,
+          "w": 8,
+          "h": 2,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "market-filters",
+          "type": "text",
+          "label": "Freshness and trust filters",
+          "hint": "Harvest date, verified farmers, same-day photo proof, price range, availability, and distance",
+          "x": 8,
+          "y": 1,
+          "w": 4,
+          "h": 2,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "listing-grid",
+          "type": "text",
+          "label": "Nearby crop listings",
+          "hint": "Photo-rich responsive cards with distance, progressive-radius notice, price, mandi comparison, quantity, harvest/listed freshness, and verification",
+          "x": 0,
+          "y": 3,
+          "w": 8,
+          "h": 9,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "farm-map",
+          "type": "map",
+          "label": "Nearby farms map",
+          "hint": "Telangana map with listing markers and selected farm distance context",
+          "x": 8,
+          "y": 3,
+          "w": 4,
+          "h": 5,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "price-spotlight",
+          "type": "card",
+          "label": "Fair-price spotlight",
+          "hint": "Visual comparison of farmer offer and current local mandi reference",
+          "x": 8,
+          "y": 8,
+          "w": 4,
+          "h": 2,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "advisory-preview",
+          "type": "card",
+          "label": "Seasonal advisory",
+          "hint": "Sourced ICAR/KVK guidance preview linking to the advisory library",
+          "x": 8,
+          "y": 10,
+          "w": 4,
+          "h": 2,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-a1a23c67",
+      "name": "Crop Listing Detail",
+      "route": "/listing/[id]",
+      "item_ref": {
+        "index": 1,
+        "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+      },
+      "blocks": [
+        {
+          "id": "detail-nav",
+          "type": "nav",
+          "label": "Marketplace navigation",
+          "hint": "Shared bilingual navigation and account controls",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "proof-gallery",
+          "type": "text",
+          "label": "Same-day crop photo proof",
+          "hint": "Large authentic produce image with capture date and proof indicator",
+          "x": 0,
+          "y": 1,
+          "w": 7,
+          "h": 7,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "crop-detail",
+          "type": "text",
+          "label": "Crop and freshness details",
+          "hint": "Crop, quantity, farmer price, mandi average, harvest date, listed-on time, distance, and availability",
+          "x": 7,
+          "y": 1,
+          "w": 5,
+          "h": 5,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "farmer-profile",
+          "type": "card",
+          "label": "Verified farmer profile",
+          "hint": "Local partner badge, farm location, short profile, and voice introduction player",
+          "x": 7,
+          "y": 6,
+          "w": 5,
+          "h": 2,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "order-request",
+          "type": "form",
+          "label": "Request this order",
+          "hint": "Quantity, delivery or pickup preference, note, estimated total, and request action",
+          "x": 0,
+          "y": 8,
+          "w": 7,
+          "h": 4,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "detail-advice",
+          "type": "card",
+          "label": "Relevant crop advice",
+          "hint": "Trusted sourced tips for the selected crop",
+          "x": 7,
+          "y": 8,
+          "w": 5,
+          "h": 4,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-8e32d55e",
+      "name": "Farmer Listing Studio",
+      "route": "/farmer/listings",
+      "item_ref": {
+        "index": 1,
+        "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+      },
+      "blocks": [
+        {
+          "id": "farmer-nav",
+          "type": "nav",
+          "label": "Farmer navigation",
+          "hint": "Marketplace, My Listings, Orders, Advisory, language, and profile",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "listing-form",
+          "type": "form",
+          "label": "Create or edit crop listing",
+          "hint": "Crop, quantity/unit, price, harvest date, farm location, validation, and publish controls",
+          "x": 0,
+          "y": 1,
+          "w": 7,
+          "h": 9,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "photo-upload",
+          "type": "image",
+          "label": "Today’s photo proof",
+          "hint": "Camera-first image capture with capture-date requirement and preview",
+          "x": 7,
+          "y": 1,
+          "w": 5,
+          "h": 4,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "voice-intro",
+          "type": "form",
+          "label": "Voice introduction",
+          "hint": "Record, review, replace, and save a short Telugu or English introduction",
+          "x": 7,
+          "y": 5,
+          "w": 5,
+          "h": 3,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "farmer-listings",
+          "type": "list",
+          "label": "Current listings",
+          "hint": "Availability, freshness, views, order interest, edit, and unpublish actions",
+          "x": 7,
+          "y": 8,
+          "w": 5,
+          "h": 4,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-da16a0c6",
+      "name": "Crop Advisory Library",
+      "route": "/advisory",
+      "item_ref": {
+        "index": 1,
+        "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+      },
+      "blocks": [
+        {
+          "id": "advisory-nav",
+          "type": "nav",
+          "label": "Marketplace navigation",
+          "hint": "Shared bilingual navigation",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "advisory-header",
+          "type": "header",
+          "label": "Trusted crop guidance",
+          "hint": "English/Telugu title, source standards, and seasonal context",
+          "x": 0,
+          "y": 1,
+          "w": 8,
+          "h": 2,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "advisory-search",
+          "type": "form",
+          "label": "Find advice",
+          "hint": "Crop search with season and topic filters",
+          "x": 8,
+          "y": 1,
+          "w": 4,
+          "h": 2,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "advisory-cards",
+          "type": "card_grid",
+          "label": "Advisory articles",
+          "hint": "Crop-specific curated cards with source attribution to ICAR/KVK, language, summary, and read action",
+          "x": 0,
+          "y": 3,
+          "w": 8,
+          "h": 8,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "advisory-sources",
+          "type": "text",
+          "label": "Sources and safety",
+          "hint": "Source links, reviewed dates, and guidance disclaimer",
+          "x": 8,
+          "y": 3,
+          "w": 4,
+          "h": 8,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the bilingual customer and farmer experience: secure email/password signup and login with role-aware onboarding; English/Telugu toggle; location permission and Telangana address fallback; nearest-first listings with progressive radius expansion; searchable crop cards and detail views showing farmer price versus local mandi average, harvest/listed timestamps, quantity, verified-partner badge, same-day photo proof, voice introduction, farmer listing creation/editing, and a sourced static ICAR/KVK crop advisory library."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-f6bec0d7",
+      "name": "Order Conversation",
+      "route": "/orders/[id]",
+      "item_ref": {
+        "index": 2,
+        "text": "Build the buyer-seller transaction flow: listing-linked order requests, quantity and delivery details, threaded bilingual chat with voice-note playback, order status tracking, standard Razorpay/UPI checkout, clear platform-held status messaging, delivery confirmation, dispute entry, cancellation/error handling, and admin-controlled manual farmer payout recording without implying Razorpay escrow."
+      },
+      "blocks": [
+        {
+          "id": "order-nav",
+          "type": "nav",
+          "label": "Marketplace navigation",
+          "hint": "Shared bilingual navigation with Orders active",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the buyer-seller transaction flow: listing-linked order requests, quantity and delivery details, threaded bilingual chat with voice-note playback, order status tracking, standard Razorpay/UPI checkout, clear platform-held status messaging, delivery confirmation, dispute entry, cancellation/error handling, and admin-controlled manual farmer payout recording without implying Razorpay escrow."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "order-summary",
+          "type": "timeline",
+          "label": "Order summary",
+          "hint": "Crop, buyer/seller, requested quantity, amount, delivery details, status timeline, and payment state",
+          "x": 0,
+          "y": 1,
+          "w": 4,
+          "h": 6,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the buyer-seller transaction flow: listing-linked order requests, quantity and delivery details, threaded bilingual chat with voice-note playback, order status tracking, standard Razorpay/UPI checkout, clear platform-held status messaging, delivery confirmation, dispute entry, cancellation/error handling, and admin-controlled manual farmer payout recording without implying Razorpay escrow."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "order-chat",
+          "type": "chat",
+          "label": "Buyer-seller conversation",
+          "hint": "Timestamped text thread linked to the order with read state and voice-note playback",
+          "x": 4,
+          "y": 1,
+          "w": 8,
+          "h": 7,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the buyer-seller transaction flow: listing-linked order requests, quantity and delivery details, threaded bilingual chat with voice-note playback, order status tracking, standard Razorpay/UPI checkout, clear platform-held status messaging, delivery confirmation, dispute entry, cancellation/error handling, and admin-controlled manual farmer payout recording without implying Razorpay escrow."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "message-composer",
+          "type": "form",
+          "label": "Message composer",
+          "hint": "Text message entry and send action with bilingual labels",
+          "x": 0,
+          "y": 8,
+          "w": 8,
+          "h": 2,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the buyer-seller transaction flow: listing-linked order requests, quantity and delivery details, threaded bilingual chat with voice-note playback, order status tracking, standard Razorpay/UPI checkout, clear platform-held status messaging, delivery confirmation, dispute entry, cancellation/error handling, and admin-controlled manual farmer payout recording without implying Razorpay escrow."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "payment-actions",
+          "type": "card",
+          "label": "Payment and delivery actions",
+          "hint": "Razorpay/UPI checkout, platform-held explanation, confirm delivery, cancel, or raise dispute based on status",
+          "x": 8,
+          "y": 8,
+          "w": 4,
+          "h": 4,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the buyer-seller transaction flow: listing-linked order requests, quantity and delivery details, threaded bilingual chat with voice-note playback, order status tracking, standard Razorpay/UPI checkout, clear platform-held status messaging, delivery confirmation, dispute entry, cancellation/error handling, and admin-controlled manual farmer payout recording without implying Razorpay escrow."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-134989d1",
+      "name": "Admin Operations",
+      "route": "/admin",
+      "item_ref": {
+        "index": 3,
+        "text": "Build the responsive admin panel and launch shell: manage and verify farmers/local-partner badges, review photo proof, oversee listings, orders, payment references, delivery confirmations, payout status, chats and disputes, maintain mandi reference prices and advisory entries, enforce role permissions and validation, provide useful loading/empty/error states, and configure the bilingual marketplace as an installable offline-tolerant PWA with manifest, icons, and service-worker behavior."
+      },
+      "blocks": [
+        {
+          "id": "admin-sidebar",
+          "type": "sidebar",
+          "label": "Admin navigation",
+          "hint": "Overview, Farmers, Listings, Orders, Disputes, Mandi Prices, Advisory, and audit activity",
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 12,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the responsive admin panel and launch shell: manage and verify farmers/local-partner badges, review photo proof, oversee listings, orders, payment references, delivery confirmations, payout status, chats and disputes, maintain mandi reference prices and advisory entries, enforce role permissions and validation, provide useful loading/empty/error states, and configure the bilingual marketplace as an installable offline-tolerant PWA with manifest, icons, and service-worker behavior."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "admin-header",
+          "type": "header",
+          "label": "Operations control room",
+          "hint": "Current section, bilingual marketplace status, search, and admin account",
+          "x": 2,
+          "y": 0,
+          "w": 10,
+          "h": 1,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the responsive admin panel and launch shell: manage and verify farmers/local-partner badges, review photo proof, oversee listings, orders, payment references, delivery confirmations, payout status, chats and disputes, maintain mandi reference prices and advisory entries, enforce role permissions and validation, provide useful loading/empty/error states, and configure the bilingual marketplace as an installable offline-tolerant PWA with manifest, icons, and service-worker behavior."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "admin-stats",
+          "type": "kpi",
+          "label": "Marketplace health",
+          "hint": "Pending verifications, live listings, active orders, unresolved disputes, held payments, and payouts due",
+          "x": 2,
+          "y": 1,
+          "w": 10,
+          "h": 2,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the responsive admin panel and launch shell: manage and verify farmers/local-partner badges, review photo proof, oversee listings, orders, payment references, delivery confirmations, payout status, chats and disputes, maintain mandi reference prices and advisory entries, enforce role permissions and validation, provide useful loading/empty/error states, and configure the bilingual marketplace as an installable offline-tolerant PWA with manifest, icons, and service-worker behavior."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "admin-queue",
+          "type": "table",
+          "label": "Priority review queue",
+          "hint": "Filterable farmers, same-day photo proof, orders, disputes, payment references, and payout records with contextual actions",
+          "x": 2,
+          "y": 3,
+          "w": 7,
+          "h": 7,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the responsive admin panel and launch shell: manage and verify farmers/local-partner badges, review photo proof, oversee listings, orders, payment references, delivery confirmations, payout status, chats and disputes, maintain mandi reference prices and advisory entries, enforce role permissions and validation, provide useful loading/empty/error states, and configure the bilingual marketplace as an installable offline-tolerant PWA with manifest, icons, and service-worker behavior."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "admin-inspector",
+          "type": "inspector",
+          "label": "Review inspector",
+          "hint": "Selected record evidence, linked parties, history, verification, dispute resolution, and payout controls",
+          "x": 9,
+          "y": 3,
+          "w": 3,
+          "h": 7,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the responsive admin panel and launch shell: manage and verify farmers/local-partner badges, review photo proof, oversee listings, orders, payment references, delivery confirmations, payout status, chats and disputes, maintain mandi reference prices and advisory entries, enforce role permissions and validation, provide useful loading/empty/error states, and configure the bilingual marketplace as an installable offline-tolerant PWA with manifest, icons, and service-worker behavior."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "admin-content",
+          "type": "form",
+          "label": "Market content maintenance",
+          "hint": "Update Telangana mandi reference prices and sourced advisory entries with review metadata",
+          "x": 2,
+          "y": 10,
+          "w": 10,
+          "h": 4,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the responsive admin panel and launch shell: manage and verify farmers/local-partner badges, review photo proof, oversee listings, orders, payment references, delivery confirmations, payout status, chats and disputes, maintain mandi reference prices and advisory entries, enforce role permissions and validation, provide useful loading/empty/error states, and configure the bilingual marketplace as an installable offline-tolerant PWA with manifest, icons, and service-worker behavior."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    }
+  ],
+  "attached_to_plan": true
+}
