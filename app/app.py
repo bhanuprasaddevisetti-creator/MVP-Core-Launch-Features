@@ -78,9 +78,9 @@ app = rx.App(
     ],
 )
 app.add_page(
-    listing_detail_page,
-    route="/listing/[id]",
-    on_load=ListingState.load_listing,
+    admin_page,
+    route="/admin",
+    on_load=OtpAuthState.guard_admin,
 )
 app.add_page(index, route="/")
 app.add_page(login_page, route="/login")
