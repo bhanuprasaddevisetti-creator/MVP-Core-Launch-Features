@@ -1,5 +1,5 @@
 import reflex as rx
-import reflex_enterprise as rxe
+
 
 from app import design
 from app.components.nav import site_nav
@@ -274,62 +274,6 @@ def _listing_grid() -> rx.Component:
     )
 
 
-def _marker(item: ListingCard) -> rx.Component:
-    return rxe.map.marker(
-        rxe.map.popup(
-            rx.el.div(
-                rx.el.p(item["crop"], class_name="font-semibold"),
-                rx.el.p(item["distance_label"], class_name="text-xs"),
-                rx.el.a(
-                    "Open listing",
-                    href=f"/listing/{item['id']}",
-                    class_name="text-xs font-semibold underline",
-                ),
-            )
-        ),
-        position=rxe.map.latlng(lat=item["lat"], lng=item["lon"]),
-    )
-
-
-def _farm_map() -> rx.Component:
-    return rx.el.div(
-        rx.el.h2("Nearby farms map", class_name=design.HEADING_MD),
-        rx.el.div(
-            rxe.map(
-                rxe.map.tile_layer(
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                    attribution="&copy; OpenStreetMap contributors",
-                ),
-                rxe.map.marker(
-                    rxe.map.popup("You are searching from here"),
-                    position=rxe.map.latlng(
-                        lat=MarketplaceState.latitude,
-                        lng=MarketplaceState.longitude,
-                    ),
-                ),
-                rx.foreach(MarketplaceState.listings, _marker),
-                id="telangana-farm-map",
-                center=rxe.map.latlng(
-                    lat=MarketplaceState.latitude,
-                    lng=MarketplaceState.longitude,
-                ),
-                zoom=9.0,
-                height="260px",
-                width="100%",
-            ),
-            class_name="min-h-[260px] w-full shrink-0 overflow-hidden rounded-xl",
-        ),
-        rx.el.p(
-            MarketplaceState.location_status,
-            class_name=design.HELPER,
-        ),
-        id="farm-map",
-        class_name=(
-            "col-span-12 lg:col-start-9 lg:col-span-4 lg:row-start-4 "
-            "lg:row-span-5 space-y-3 rounded-xl border border-[#E7DCC8] "
-            "bg-white p-4"
-        ),
-    )
 
 
 def _price_spotlight() -> rx.Component:
