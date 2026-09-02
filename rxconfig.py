@@ -1,7 +1,6 @@
 import reflex as rx
-import reflex_enterprise as rxe
 
-config = rxe.Config(
+config = rx.Config(
     app_name="app",
     plugins=[
         rx.plugins.SitemapPlugin(),
