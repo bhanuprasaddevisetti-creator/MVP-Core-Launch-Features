@@ -354,7 +354,6 @@ def marketplace_page() -> rx.Component:
             _search_form(),
             _filters(),
             _listing_grid(),
-            _farm_map(),
             _price_spotlight(),
             _advisory_preview(),
             class_name=_GRID,
