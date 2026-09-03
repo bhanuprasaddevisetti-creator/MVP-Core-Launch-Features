@@ -81,8 +81,8 @@ class OtpAuthState(rx.State):
     step: str = "identifier"
     error: str = ""
 
-    session_user_id: int = rx.Cookie(0, name="rm_uid")
-    session_role: str = rx.Cookie("", name="rm_role")
+        session_user_id: int = 0
+    session_role: str = ""
 
     @rx.var
     def is_authenticated(self) -> bool:
