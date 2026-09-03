@@ -40,24 +40,22 @@ def _send_otp(identifier: str, code: str) -> None:
 
 
 def _send_email_otp(email: str, code: str) -> None:
-    smtp_host = os.environ.get("SMTP_HOST")
-    if not smtp_host:
+    api_key = os.environ.get("RESEND_API_KEY")
+    if not api_key:
         print(f"[DEV OTP] {email}: {code}")
         return
-    import smtplib
-    from email.mime.text import MIMEText
+    import resend
 
-    msg = MIMEText(
-        f"Your Rythu Mithra sign-in code is {code}. "
-        f"It expires in {OTP_TTL_MINUTES} minutes."
-    )
-    msg["Subject"] = "Your sign-in code"
-    msg["From"] = os.environ.get("SMTP_FROM", "no-reply@rythumithra.app")
-    msg["To"] = email
-    with smtplib.SMTP(smtp_host, int(os.environ.get("SMTP_PORT", "587"))) as server:
-        server.starttls()
-        server.login(os.environ["SMTP_USER"], os.environ["SMTP_PASSWORD"])
-        server.send_message(msg)
+    resend.api_key = api_key
+    resend.Emails.send({
+        "from": os.environ.get("RESEND_FROM", "Rythu Mithra <onboarding@resend.dev>"),
+        "to": [email],
+        "subject": "Your sign-in code",
+        "text": (
+            f"Your Rythu Mithra sign-in code is {code}. "
+            f"It expires in {OTP_TTL_MINUTES} minutes."
+        ),
+    })
 
 
 def _send_sms_otp(phone: str, code: str) -> None:
