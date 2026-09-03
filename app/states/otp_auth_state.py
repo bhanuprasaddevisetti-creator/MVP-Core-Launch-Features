@@ -131,9 +131,10 @@ class OtpAuthState(rx.State):
         self.identifier = identifier
         self.step = "otp"
 
-    def verify_otp(self):
+       def verify_otp(self):
         identifier = self.identifier
         code = self.otp_input.strip()
+        print(f"[DEBUG] verify_otp called: identifier={identifier!r} code={code!r}")
         if not code:
             self.error = "Enter the code we sent you."
             return
@@ -146,9 +147,11 @@ class OtpAuthState(rx.State):
                 .order_by(OtpCode.created_at.desc())
             )
             otp = session.execute(stmt).scalars().first()
+            print(f"[DEBUG] otp found: {otp}")
 
             if otp is None or otp.expires_at < dt.datetime.now(dt.timezone.utc):
                 self.error = "Code expired. Request a new one."
+                print(f"[DEBUG] expired or missing")
                 return
             if otp.attempts >= 5:
                 self.error = "Too many attempts. Request a new code."
@@ -157,47 +160,12 @@ class OtpAuthState(rx.State):
                 otp.attempts += 1
                 session.commit()
                 self.error = "Incorrect code."
+                print(f"[DEBUG] hash mismatch")
                 return
 
+            print(f"[DEBUG] code verified successfully, proceeding")
             otp.consumed_at = dt.datetime.now(dt.timezone.utc)
             session.commit()
-
-            is_email = "@" in identifier
-            user_stmt = select(User).where(
-                User.email == identifier if is_email else User.phone == identifier
-            )
-            user = session.execute(user_stmt).scalars().first()
-
-            if user is None:
-                placeholder_email = (
-                    identifier if is_email else f"{identifier}@otp.rythumithra.app"
-                )
-                user = User(
-                    email=placeholder_email,
-                    password_hash=_hash_code(os.urandom(16).hex(), identifier).ljust(
-                        32, "0"
-                    ),
-                    phone="" if is_email else identifier,
-                    role=UserRole.CUSTOMER,
-                )
-                session.add(user)
-                session.commit()
-                session.refresh(user)
-
-            if identifier in ADMIN_IDENTIFIERS and user.role != UserRole.ADMIN:
-                user.role = UserRole.ADMIN
-                session.commit()
-
-            user.last_login_at = dt.datetime.now(dt.timezone.utc)
-            session.commit()
-
-            self.session_user_id = user.id
-            self.session_role = user.role.value
-
-        self.error = ""
-        self.otp_input = ""
-        self.step = "identifier"
-        return rx.redirect("/")
 
     def logout(self):
         self.session_user_id = 0
