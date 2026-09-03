@@ -132,13 +132,27 @@ class OtpAuthState(rx.State):
             self.error = "Enter the code we sent you."
             return
 
-        with get_session() as session:
-            stmt = (
-                select(OtpCode)
-                .where(OtpCode.identifier == identifier)
-                .where(OtpCode.consumed_at.is_(None))
-                .order_by(OtpCode.created_at.desc())
+                with get_session() as session:
+            session.add(
+                OtpCode(
+                    identifier=identifier,
+                    code_hash=_hash_code(code, identifier),
+                    purpose="login",
+                    expires_at=expires_at,
+                )
             )
+            session.commit()
+
+        try:
+            _send_otp(identifier, code)
+        except Exception as exc:
+            self.error = f"Could not send code: {exc}"
+            return
+
+        self.identifier = identifier
+        self.step = "otp"
+
+        
             otp = session.execute(stmt).scalars().first()
 
             if otp is None or otp.expires_at < dt.datetime.now(dt.timezone.utc):
