@@ -1,7 +1,7 @@
 import reflex as rx
 
 from app import design
-from app.states.auth_state import AuthState
+from app.states.otp_auth_state import OtpAuthState
 
 
 def admin_page() -> rx.Component:
@@ -11,7 +11,7 @@ def admin_page() -> rx.Component:
                 rx.el.h1("Admin control room", class_name=design.HEADING_MD),
                 rx.el.button(
                     "Log out",
-                    on_click=AuthState.logout,
+                    on_click=OtpAuthState.logout,
                     class_name=design.BUTTON_SECONDARY,
                 ),
                 class_name="flex items-center justify-between",
