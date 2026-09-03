@@ -1,6 +1,6 @@
 import reflex as rx
 from app.pages.admin import admin_page
-from app.states.auth_state import AuthState
+from app.states.otp_auth_state import OtpAuthState
 
 from app import design
 from app.pages.advisory import advisory_page
