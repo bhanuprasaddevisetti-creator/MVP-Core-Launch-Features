@@ -16,14 +16,11 @@ OTP_LENGTH = 6
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 PHONE_RE = re.compile(r"^\+?[0-9]{10,15}$")
 
-
 ADMIN_IDENTIFIERS = {
     x.strip().lower()
     for x in os.environ.get("ADMIN_IDENTIFIERS", "").split(",")
     if x.strip()
 }
-
-
 
 
 def _hash_code(code: str, identifier: str) -> str:
@@ -182,6 +179,10 @@ class OtpAuthState(rx.State):
                 session.add(user)
                 session.commit()
                 session.refresh(user)
+
+            if identifier in ADMIN_IDENTIFIERS and user.role != UserRole.ADMIN:
+                user.role = UserRole.ADMIN
+                session.commit()
 
             user.last_login_at = dt.datetime.now(dt.timezone.utc)
             session.commit()
