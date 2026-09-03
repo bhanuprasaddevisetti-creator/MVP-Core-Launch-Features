@@ -83,6 +83,8 @@ class OtpAuthState(rx.State):
 
     session_user_id: int = 0
     session_role: str = ""
+
+    @rx.var
     def is_authenticated(self) -> bool:
         return self.session_user_id > 0
 
@@ -121,27 +123,6 @@ class OtpAuthState(rx.State):
                 )
             )
             session.commit()
-        _send_otp(identifier, code)
-        self.identifier = identifier
-        self.step = "otp"
-
-    def verify_otp(self):
-        identifier = self.identifier
-        code = self.otp_input.strip()
-        if not code:
-            self.error = "Enter the code we sent you."
-            return
-
-                with get_session() as session:
-            session.add(
-                OtpCode(
-                    identifier=identifier,
-                    code_hash=_hash_code(code, identifier),
-                    purpose="login",
-                    expires_at=expires_at,
-                )
-            )
-            session.commit()
 
         try:
             _send_otp(identifier, code)
@@ -152,7 +133,20 @@ class OtpAuthState(rx.State):
         self.identifier = identifier
         self.step = "otp"
 
-        
+    def verify_otp(self):
+        identifier = self.identifier
+        code = self.otp_input.strip()
+        if not code:
+            self.error = "Enter the code we sent you."
+            return
+
+        with get_session() as session:
+            stmt = (
+                select(OtpCode)
+                .where(OtpCode.identifier == identifier)
+                .where(OtpCode.consumed_at.is_(None))
+                .order_by(OtpCode.created_at.desc())
+            )
             otp = session.execute(stmt).scalars().first()
 
             if otp is None or otp.expires_at < dt.datetime.now(dt.timezone.utc):
