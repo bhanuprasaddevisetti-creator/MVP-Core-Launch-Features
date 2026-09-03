@@ -81,10 +81,8 @@ class OtpAuthState(rx.State):
     step: str = "identifier"
     error: str = ""
 
-        session_user_id: int = 0
+    session_user_id: int = 0
     session_role: str = ""
-
-    @rx.var
     def is_authenticated(self) -> bool:
         return self.session_user_id > 0
 
